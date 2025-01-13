@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,8 +20,10 @@
     "discord.js": "^14.17.3",
     "dotenv": "^16.4.5",
     "erela.js": "^2.4.0",
+    "express": "^4.21.2",
     "glob": "^11.0.0",
     "libsodium-wrappers": "^0.7.15",
+    "morgan": "^1.10.0",
     "play-audio": "^0.5.2",
     "play-dl": "^1.9.7",
     "ytdl-core": "^4.11.5",
