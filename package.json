@@ -1,0 +1,30 @@
+{
+  "name": "bot-discord-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.17.0",
+    "ascii-table": "^0.0.9",
+    "discord-player": "^6.7.1",
+    "discord.js": "^14.17.3",
+    "dotenv": "^16.4.5",
+    "erela.js": "^2.4.0",
+    "glob": "^11.0.0",
+    "libsodium-wrappers": "^0.7.15",
+    "play-audio": "^0.5.2",
+    "play-dl": "^1.9.7",
+    "ytdl-core": "^4.11.5",
+    "ytsr": "^3.8.4"
+  }
+}
