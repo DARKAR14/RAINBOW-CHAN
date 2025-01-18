@@ -17,9 +17,9 @@ module.exports = {
         ephermal: true,
       });
 
-    if (command.developer && interaction.user.id !== process.env.TOKEN_BOT)
+    if (command.developer && interaction.user.id !== process.env.DEVELOPER_ID)
       return interaction.reply({
-        content: "This copmmand is only available to the developer.",
+        content: "este comando solo lo puede hacer el developer",
         ephermal: true,
       });
 

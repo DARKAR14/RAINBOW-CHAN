@@ -1,4 +1,4 @@
-const express = require("express"); // Importa Express
+const express = require("express"); // Importa Express para poder tener una ruta para el metodo get y el bot no se apague
 const {
   Client,
   GatewayIntentBits,
@@ -18,24 +18,14 @@ const client = new Client({
 });
 
 const { loadEvents } = require("./src/Handlers/eventHandler");
-const morgan = require("morgan");
 
 client.events = new Collection();
 client.commands = new Collection();
 
+require('./src/Handlers/anti-crash')(client);
 loadEvents(client);
 
-client.login(process.env.TOKEN_BOT).then(() => {
-  client.user.setPresence({
-    activities: [
-      {
-        name: `Celeste`,
-        type: ActivityType.PLAYING, // Cambia el tipo si es necesario (WATCHING, LISTENING, etc.)
-      },
-    ],
-    status: "online", // Estado: 'online', 'dnd', 'idle', etc.
-  });
-});
+client.login(process.env.TOKEN_BOT2)
 
 // === Configuración del servidor HTTP con Express ===
 const app = express();

@@ -1,6 +1,7 @@
 const {
   ChatInputCommandInteraction,
   SlashCommandBuilder,
+  MessageFlags
 } = require("discord.js");
 
 module.exports = {
@@ -12,6 +13,6 @@ module.exports = {
    * @param {ChatInputCommandInteraction} interaction
    */
   execute(interaction) {
-    interaction.reply({ content: "y entonces que quieres caremonda!!", ephemeral: true });
+    interaction.reply({ content: "pong", flags: MessageFlags.Ephemeral, });
   },
 };

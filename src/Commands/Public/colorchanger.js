@@ -9,7 +9,7 @@ module.exports = {
    * @param {ChatInputCommandInteraction} interaction
    */
   async execute(interaction) {
-    const { serverID, roleID, interval } = process.env; // Usamos dotenv para obtener los valores
+    const { serverID, roleID, interval } = process.env; // prefiero usar dotenv para obtener los valores (por seguridad y buena practica)
 
     // Verificar si las configuraciones están presentes y proporcionar detalles sobre cuál falta
     let missingConfigs = [];

@@ -1,12 +1,19 @@
-const { loadCommands } = require("../../Handlers/commandHandler")
+const { loadCommands } = require("../../Handlers/commandHandler");
+const mongoose = require('mongoose');
 
-//estoy es el ready
-module.exports ={
+module.exports = {
     name: "ready",
     once: true,
-    execute(client){
-        console.log(`${client.user.tag} está en línea y listo.`)
+    async execute(client) {
+        console.log(`${client.user.tag} está en línea y listo.`);
 
-        loadCommands(client)
-    }
-}
+        try {
+            await mongoose.connect(process.env.MONGODB_URI); // Sin las opciones deprecated
+            console.log('Conexión a la base de datos exitosa.');
+        } catch (error) {
+            console.error('Error conectándose a la base de datos:', error);
+        }
+
+        loadCommands(client);
+    },
+};
