@@ -4,7 +4,7 @@ const OpenAI = require('openai');
 // Configuración de la API de DeepSeek
 const openai = new OpenAI({
     baseURL: 'https://api.deepseek.com/v1', // Endpoint correcto
-    apiKey: 'sk-d5da08883a704ac0b10b3f312695cf2d' // Reemplázalo con tu clave de API de DeepSeek
+    apiKey: process.env.DeepSeek_API // Reemplázalo con tu clave de API de DeepSeek
 });
 
 module.exports = {
