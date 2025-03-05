@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const OsuUser = require('../../Models/OsuUser');
+const OsuUser = require('../../Models/GeinshiUser');
 const osu = require('node-osu');
 const osuApi = new osu.Api(process.env.OSU_API_KEY, {
     notFoundAsError: true,

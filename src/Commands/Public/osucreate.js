@@ -3,7 +3,7 @@ const OsuUser = require('../../Models/OsuUser');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('create')
+        .setName('osucreate')
         .setDescription('Sincroniza tu cuenta de osu!')
         .addStringOption(option =>
             option
